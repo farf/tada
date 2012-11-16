@@ -14,3 +14,6 @@ Template.description.tada = function() {
 	console.log(tada);
 	return tada;
 }
+$(document).ready(function() {
+   
+ });
