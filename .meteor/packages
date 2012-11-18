@@ -9,3 +9,5 @@ preserve-inputs
 bootstrap
 less
 jquery
+backbone
+http

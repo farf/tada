@@ -40,7 +40,7 @@ $(document).ready(function() {
                 ];
 
                 editor.config.floatSpaceDockedOffsetY = 69; //68
-                editor.config.floatSpaceDockedOffsetX = -10;
+                editor.config.floatSpaceDockedOffsetX = 0;
                 //editor.config.skin = 'tada,/skins/tada/';
                 //console.log('tada,/skins/tada/');
             });

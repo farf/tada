@@ -13,15 +13,17 @@ TadaFactory.addChild = function(parent, child) {
 }
 
 TadaFactory.insertTadaFromJson = function(json) {
+	// check parameters
+	if (typeof json == "undefined") {
+		return;
+	}
 
 	//remove children
 	if (typeof json.tadas != "undefined") {
 		var children = json.tadas;
 		json.tadas = new Array;
-		console.log(children.length);
 	} else {
 		var children = null;
-		console.log(":(");
 	}
 
 	var _id = TadaFactory.insert(json);
@@ -39,6 +41,7 @@ TadaFactory.insertTadaFromJson = function(json) {
 		}
 
 	}
-	if (_ids) console.log(_ids.length);
 	TadaFactory.update(_id, {$set: {tadas: _ids}});
+
+	return _id;
 }
