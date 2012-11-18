@@ -1,0 +1,214 @@
+/* Variables */ 
+@background-color: #F9F9FA;
+@border-color:#d5d5d5;
+@text-color:#333;
+
+body {
+	color: @text-color;
+	background-color: @background-color;
+	padding: 10px;
+	height: 100%;
+	font-family: Times;
+}
+.tada {
+	height: 100%;
+}
+.tada-container {
+
+	min-width: 500px;
+	top: 10px;
+	bottom: 10px;
+	overflow: auto;
+	position: absolute;
+	border: 1px solid @border-color;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #ddd;
+
+	.navbar-inner {
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border-width : 0px 0px 1px 0px;
+		padding-right: 5px;
+		padding-left: 5px;
+
+		li {
+			line-height: 10px;
+		}
+
+		input {
+			height: 13px;
+			line-height: 1.5;
+			margin-top: -1px;
+		}
+
+		.nav .dropdown-toggle .caret {
+			margin-top: 5px;
+		}
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	.navbar-inner {
+		min-height: 10px;
+		box-shadow: none;
+	}
+
+	.breadcrumb {
+		background-color: transparent;
+		padding: 0px;
+		margin:0px;
+	}
+
+	.tada-inner {
+		.description, .items, .history {
+			padding: 10px;
+			border-bottom: solid 1px @border-color;
+		}
+
+		.description {
+			.users {
+				.icon-remove {
+					text-align: right;
+					float:right;
+					display:block;
+					margin-top: 3px;
+				}
+
+				.plus {
+					text-align: center;
+				}
+			}
+			
+			.tags {
+				margin: -10px -10px 5px -10px;
+				width: 100%;
+
+				.label {
+					display:block;
+					font-weight: normal;
+					float:left;
+					background-color: white;
+					color: @text-color;
+					text-shadow: none;
+					cursor: pointer;
+					border-radius: 0px;
+					border: solid 1px @border-color;
+					margin:0px 0px -1px -1px;
+				}
+
+				.removable {
+					padding-left: 12px;
+					padding-right: 12px;
+				}
+
+				.removable .icon-remove {
+					width:0px;
+				}
+
+				.removable:hover {
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+
+				.removable:hover .icon-remove{
+					width: 14px;
+				}
+
+				.plus {
+					opacity: 0.1;
+				}
+			}
+
+			.plus:hover {
+					opacity: 1;
+			}
+			
+			p {
+				margin: 5px 0 0 0;
+			}
+
+			.avatar-container {
+				margin-top: 8px;
+				float: left;
+				margin-right: 5px;
+
+				.dropdown-toggle {
+					cursor: pointer;
+				}
+
+				.users-number {
+					font-size: 9px;
+					color:@text-color;
+					text-shadow: 0 1px 2px #fff;
+					z-index:10;
+					display: block;
+					position: absolute;
+					bottom: 0px;
+					right: 0px;
+					line-height: 10px;
+				}
+				img {
+					width: 25px;
+					height: 25px;
+					background-color: #ccc;
+				}
+			}
+
+			h2 {
+				margin: 0px 0px;
+				font-weight: normal;
+				outline: none;
+			}
+
+			.text {
+				
+				outline: none;
+			}
+		}
+		
+		.items {
+
+			li {
+				line-height: 25px;
+			}
+
+		}
+
+		.history {
+			form {
+				margin:5px;
+			}
+
+			.message {
+				width: 100%;
+				margin: 0 -5px 0 -5px;
+				padding: 5px;
+			}
+
+			hr {
+				margin: 5px 0px;
+			}
+
+		}
+	}
+
+	
+}
+
+.logo {
+	position: absolute;
+	top:10px;
+	left:10px;
+	color:white;
+}
+
+.clear {
+	clear: both;
+}
+
+.ui-editor-path {
+	display: none;
+}
