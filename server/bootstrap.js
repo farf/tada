@@ -34,9 +34,12 @@ Meteor.startup(function () {
   		console.log('INSERTED');
   	}
 
-  	// Connectors
-  	var asana = new Asana({auth:"1NDW80y.xTY8OYY3IGtfm5hhr83vStxJ:"});
-  	TadaFactory.remove({});
-  	console.log('RESET');
-	TadaFactory.insertTadaFromJson(asana.getTadas());
+  	if (TadaFactory.findOne({name:"Asana"}).length != 1) {
+	  	// Connectors
+	  	var asana = new Asana({auth:"1NDW80y.xTY8OYY3IGtfm5hhr83vStxJ:"});
+	  	TadaFactory.remove({});
+	  	console.log('RESET');
+		TadaFactory.insertTadaFromJson(asana.getTadas());	
+  	}
+  	
 });
