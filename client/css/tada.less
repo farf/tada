@@ -1,4 +1,4 @@
-/* CSS declarations go here */
+/* Variables */ 
 @background-color: #F9F9FA;
 @border-color:#d5d5d5;
 @text-color:#333;
@@ -63,12 +63,56 @@ body {
 	}
 
 	.tada-inner {
-		.description, .items, .history {
+		.items, .history, .text {
 			padding: 10px;
 			border-bottom: solid 1px @border-color;
 		}
 
-		.description {
+		.parents {
+			margin: 0px 0px 5px 0px;
+			width: 100%;
+
+			.label {
+				display:block;
+				font-weight: normal;
+				float:left;
+				background-color: white;
+				color: @text-color;
+				text-shadow: none;
+				cursor: pointer;
+				border-radius: 0px;
+				border: solid 1px @border-color;
+				margin:0px 0px -1px -1px;
+			}
+
+			.removable {
+				padding-left: 12px;
+				padding-right: 12px;
+			}
+
+			.removable .icon-remove {
+				width:0px;
+			}
+
+			.removable:hover {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+
+			.removable:hover .icon-remove{
+				width: 14px;
+			}
+
+			.plus {
+				opacity: 0.1;
+			}
+		}
+
+		.plus:hover {
+				opacity: 1;
+		}
+
+		.summary {
 			.users {
 				.icon-remove {
 					text-align: right;
@@ -81,49 +125,9 @@ body {
 					text-align: center;
 				}
 			}
-			
-			.tags {
-				margin: -10px -10px 5px -10px;
-				width: 100%;
 
-				.label {
-					display:block;
-					font-weight: normal;
-					float:left;
-					background-color: white;
-					color: @text-color;
-					text-shadow: none;
-					cursor: pointer;
-					border-radius: 0px;
-					border: solid 1px @border-color;
-					margin:0px 0px -1px -1px;
-				}
-
-				.removable {
-					padding-left: 12px;
-					padding-right: 12px;
-				}
-
-				.removable .icon-remove {
-					width:0px;
-				}
-
-				.removable:hover {
-					padding-left: 5px;
-					padding-right: 5px;
-				}
-
-				.removable:hover .icon-remove{
-					width: 14px;
-				}
-
-				.plus {
-					opacity: 0.1;
-				}
-			}
-
-			.plus:hover {
-					opacity: 1;
+			.text {
+				padding:0px 10px 10px 10px;
 			}
 			
 			p {
@@ -157,12 +161,17 @@ body {
 				}
 			}
 
-			h2 {
-				margin: 0px 0px;
-				font-weight: normal;
-				outline: none;
-			}
+			.name {
 
+				padding:0px 10px;
+
+				h2 {
+					margin: 0px 0px;
+					font-weight: normal;
+					outline: none;
+				}
+			}
+			
 			.text {
 				
 				outline: none;
