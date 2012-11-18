@@ -1,7 +1,5 @@
 console.log('START');
 Meteor.startup(function () {
-  	TadaFactory.remove({});
-  	console.log('RESET');
 
   	var tada = {
 		name: "Première tache!", 
@@ -28,5 +26,8 @@ Meteor.startup(function () {
 		]
   	};
 
-	TadaFactory.insertTadaFromJson(tada);
+  	if (TadaFactory.findOne().length > 0) {
+  		console.log('insert');
+  		TadaFactory.insertTadaFromJson(tada);
+  	}
 });

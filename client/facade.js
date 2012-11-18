@@ -15,7 +15,7 @@ Template.description.tada = function() {
 
 Template.items.tadas = function() {
 	var _id = Session.get('tada_id');
-	var tadas =  TadaFactory.find({parents:_id});
+	var tadas =  TadaFactory.find();
 	console.log(tadas); 
 	return tadas;
 }

@@ -23,7 +23,11 @@
 			</li>  
 		</ul>  
 	</div>
-	<h2 contenteditable="true" data-param="name">{{tada.name}}</h2>
+	<h2 contenteditable="true" data-param="name">{{tada.name}}
+{{#each tadas}}
+        	hello
+      	{{/each}}
+	</h2>
 	<div class="text" contenteditable = "true" data-param="text">
 		{{{tada.text}}}
 	</div>
