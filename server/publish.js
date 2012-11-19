@@ -1,3 +1,6 @@
+
+
+// authentification
 Meteor.startup(function() {
     var require = __meteor_bootstrap__.require
     var connect = require('connect')
