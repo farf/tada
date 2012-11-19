@@ -34,7 +34,7 @@ Meteor.startup(function () {
   		console.log('INSERTED');
   	}
 
-  	if (TadaFactory.findOne({name:"Asana"}).length != 1) {
+  	if (!TadaFactory.findOne({name:"Asana"})) {
 	  	// Connectors
 	  	var asana = new Asana({auth:"1NDW80y.xTY8OYY3IGtfm5hhr83vStxJ:"});
 	  	TadaFactory.remove({});
