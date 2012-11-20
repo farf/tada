@@ -26,6 +26,8 @@ Meteor.startup(function () {
 		]
   	};
 
+	TadaFactory = new Tada.TadaFactory();
+
   	if (false && TadaFactory.findOne().length > 0) {
 
 	  	TadaFactory.remove({});
@@ -34,10 +36,10 @@ Meteor.startup(function () {
   		console.log('INSERTED');
   	}
 
-  	if (!TadaFactory.findOne({name:"Asana"})) {
+  	if (!TadaFactory.collection.findOne({name:"Asana"})) {
 	  	// Connectors
-	  	var asana = new Asana({auth:"1NDW80y.xTY8OYY3IGtfm5hhr83vStxJ:"});
-	  	TadaFactory.remove({});
+	  	var asana = new Tada.Connector.Asana({auth:"1NDW80y.xTY8OYY3IGtfm5hhr83vStxJ:"});
+	  	TadaFactory.collection.remove({});
 	  	console.log('RESET');
 		TadaFactory.insertTadaFromJson(asana.getTadas());	
   	}

@@ -1,7 +1,10 @@
+if (typeof Tada == 'undefined') { var Tada = {};}
+if (typeof Tada.Connector == 'undefined') { Tada.Connector = {};}
+
 /**
 * Initialize({auth: "the key for asana"})
 */
-var Asana = Tada.Connector.extend({
+Tada.Connector.Asana = Tada.Connector.Abstract.extend({
 	defaults: {
 	    "source":  "asana",
 	    "auth": "unset",
